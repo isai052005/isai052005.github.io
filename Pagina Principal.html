@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/CSS.css">
+</head>
+<body>
+    <header>
+        <div class="ip"><img src="IMG/logo.jpg" alt="" height="80"></div>
+        <nav>
+            <a href="Pagina Principal.html">INICIO</a>
+            <a href="Pagina secundaria.html">APP</a>
+            <a href="Pagina terciaria.html">DREAM TEAM</a>
+            <a href="Pagina cuarta.html">CONTACTANOS</a>
+        </nav>
+        <img class="if" src="IMG/fondo1.jpg" alt="">
+        <span>EKOFIT</span>
+    </header>
+
+    <section>
+        <div class="gif">
+            <img src="IMG/gif.gif" alt="">
+        </div>
+        <div class="parte1">
+            <p class="pp" style="color: blue;">EJERCICIO FÍSICO</p><br>
+            <p>Es cualquier movimiento voluntario realizado por los músculos qué gasta energía extra además de la energía
+               que nuestro cuerpo consume y necesita para mantener la vida o actividad basal (dormir, respirar, procesos metabólicos, etc). 
+               Lo más probable es que hayas oído incontables veces que hacer ejercicio es “BUENO PARA TÍ”. Pero, ¿sabías que también te puede 
+               ayudar a sentirte bien?, hacer la cantidad adecuada de ejercicio físico puede aumentar tu nivel de energía y hasta ayudarte a 
+               mejorar tu estado de ánimo.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class="parte2">
+            <p style="color: blue;">TOMAR AGUA ES IMPORTANTE</p><br>
+            <p>Tomar agua es vital para tener un cuerpo saludable. Tu cuerpo es aproximadamente 60 por ciento de agua. Usas el agua para 
+                eliminar las toxinas de tu cuerpo, para transportar nutrientes de tus células y para mantener los tejidos de tu nariz, 
+                de tu garganta y orejas lo suficientemente húmedos.
+                Tomar agua a lo largo del día es ideal, pero puede haber razones para tomar agua antes de ir a dormir.
+            </p>
+            <p>Lo recomendable es tomar vasos de agua de 240ml.</p>
+            <div class="p2"><br><br><br><br><br>
+                <center><p style="color: blue;">CALCULA CUANTOS LITROS NESESITAS TOMAR DEPENDIENDO TU PESO</p></center><br>
+                <center><script type="text/javascript"> 
+        
+                    function Calcular()
+                    { 
+                    
+                    var v, r;
+                    
+                    v=document.getElementById("v").value; 
+                    
+                    r=v*0.035;
+                    
+                    document.getElementById("r").value=r; 
+                    }
+                    </script>
+                    <form name="f1" id="f1" action="">
+                        
+                        <p><p>¿Cuanto pesas?<input type="text" name="peso" id="v" size="3" maxlength="4">Kg  <input type="button" value="Calcular " onClick="Calcular()"> </p>  
+                        </p>
+                        <p>
+                            <p>Nesesitas tomar<input type="text" name="imc" id="r" size="4"> 
+                            litros al día.</p>
+                        </p>
+                    </form>
+                </center>
+        </div><br><br><br>
+    </section>
+
+    <section class="abdomen">
+        <div class="contenedor">
+            <p class="titulot" style="color: blue;">TABLA DE VALORES-INDICE DE MASA CORPORAL</p>
+            <div class="img">
+                </div>
+                <div class="imc">
+                  <center><img src="IMG/tabla a.jpg" alt="" width="700" height="500" border="8"></center><br><br>
+                  <center><p style="color: blue;">¿CÓMO SE CALCULA EL IMC?</p></center><br>
+                  <p>Con ayuda del sistema metrico, la formula para IMC es dividir el peso en Kilo gramos, por la estatura en metros cuadrados.
+                     Devido a que la estatura por lo general se mide en centimetros, divida la estatura en centimetros por 100 para obtener la 
+                     estatura en metros. 
+                  </p>
+                </div><br>
+                <div class="imc2">
+                    <center><p style="color: blue;">Inténtalo tú mismo</p></center><br><br>
+                    <center><script type="text/javascript"> 
+                    //definimos la funcion
+                    function calculaIMC()
+                    { 
+                    //declaramos las variables
+                    var peso, altura, imc, leyenda;
+                    //hacemos la llamada a los datos introducidos
+                    peso=document.getElementById("peso").value; 
+                    altura=document.getElementById("altura").value/100;
+                    //calculamos el imc
+                    imc=peso/(altura*altura);
+                    //enviamos el resultado a la caja correspondiente y lo reducimos a 2 decimales
+                    document.getElementById("imc").value=imc.toFixed(2); 
+                    //mediante if comparamos el resultado para determinar si es correcto el peso
+                    if(imc<=20.5)
+                    { 
+                    //determinamos el defecto en peso y definimos el comentario
+                    leyenda="Estas delgado. Debes engordar " + (altura*altura*20.5-peso).toFixed(1) + " Kilos";
+                    }
+                    else if (imc>=25.5)
+                    {
+                    //determinamos el exceso en peso y definimos el comentario 
+                    leyenda="Tienes sobrepeso. Debes adelgazar " +(peso-altura*altura*25.5).toFixed(1) +" Kilos";
+                    }
+                    else
+                    {
+                    leyenda="Estas en tu peso ideal";
+                    } 
+                    //enviamos el comentario a la caja correspondiente
+                    document.getElementById("leyenda").value=leyenda;
+                    }
+                    </script>
+                    <form name="f1" id="f1" action="">
+                    <!--enmarcamos el formulario--> 
+                    <fieldset>
+                    <!--le damos un nombre al marco-->
+                    <p>CALCULO DEL PESO IDEAL IMC (INDICE DE MASA CORPORAL)</p>
+                    <p>Peso en kg.:
+                    <!--definimos una caja donde introducir el dato del peso-->
+                    <input type="text" name="peso" id="peso" size="3" maxlength="4"> 
+                    </p>
+                    <p>Altura en cm.:
+                    <!--definimos una caja donde introducir el dato de la altura-->
+                    <input type="text" name="altura" id="altura" size="3" maxlength="3">
+                    <!--definimos un boton que hara la llamada a la funcion para calcular el imc-->
+                    <input type="button" value="Calcular IMC" onClick="calculaIMC()">
+                    </p>
+                    <p> IMC:
+                    <!--definimos una caja donde la funcion devolvera el valor de imc calculado-->
+                    <input type="text" name="imc" id="imc" size="10" maxlength="15"> 
+                    Leyenda:
+                    <!--definimos una caja donde la funcion escribira el comentario, definido en leyenda-->
+                    <input type="text" name="leyenda" id="leyenda" size="42">
+                    </p>
+                    </fieldset>
+                    </form>
+                </center>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="cuerpo">
+        <div class="contenedor">
+            <p class="titulot" style="color: blue;">BENEFICIOS</p>
+            <div class="cards">
+                <div class="card">
+                    <img src="img/v.jpg" alt="">
+                    <div class="contenido-texto-card">
+                        <button onclick="C()"><h4>MÁS BENEFICIOS</h4></button>
+                        <script>
+                            function C(caracteristicas){
+                                var c1="1.Hace ver mejor, repercute en tu autoestima y seguridad en tu persona.";
+                                var c2="2.Tus músculos son más fuertes,  corrige tu postura y previene los dolores de articulaciones y de espalda.";
+                                var c3="3.Baja los niveles de azúcar y grasas en la sangre.";
+                                document.getElementById("demo").innerHTML=
+                                c1+"<br>"+c2+"<br>"+c3
+                            }
+                        </script>
+                        <p id="demo">Selecciona el boton para mas informacion</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/v3.jpg" alt="">
+                    <div class="contenido-texto-card">
+                        <button onclick="C2()"><h4>MÁS BENEFICIOS</h4></button>
+                        <script>
+                            function C2(caracteristicas){
+                                var ca1="1.Mejora la circulación sanguínea y reduce los niveles de colesterol.";
+                                var ca2="2.Reduce el riesgo de osteoporosis (descalcificación de los huesos).";
+                                var ca3="3.Disminuye la tensión nerviosa y la depresión, además, favorece el aprendizaje y la sensación de bienestar.";
+                                document.getElementById("demo2").innerHTML=
+                                ca1+"<br>"+ca2+"<br>"+ca3
+                            }
+                        </script>
+                        <p id="demo2">SELECCIONA EL BOTON PARA MAS INFORMACIO</p>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="contenedor-footer">
+            <div class="cont-foo">
+                <h4>Gmail.</h4>
+                <p>isaim8575@gmail.com</p>
+                <p>yerecano216@gmail.com</p>
+            </div>
+            <div class="cont-foo">
+                <h4>Telefono.</h4>
+                <p>2481022765</p>
+                <p>2481740167</p>
+            </div>
+        </div>
+        <h2 class="titulo-final">&copy;Isai MArtinez | Yeremy Cano</h2>
+    </footer>
+        
+    
+</body>
+</html>

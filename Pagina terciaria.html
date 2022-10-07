@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/CSS.css">
+</head>
+<body>
+    <header>
+        <div class="ip"><img src="IMG/logo.jpg" alt="" height="80"></div>
+        <nav>
+            <a href="Pagina Principal.html">INICIO</a>
+            <a href="Pagina secundaria.html">APP</a>
+            <a href="Pagina terciaria.html">DREAM TEAM</a>
+            <a href="Pagina cuarta.html">CONTACTANOS</a>
+        </nav>
+        <img class="if" src="IMG/fondo1.jpg" alt="">
+        <span>EKOFIT</span>
+    </header>
+    <section class="cuerpo">
+        <div class="contenedor">
+            <p class="titulo">NOSOTROS</p>
+            <div class="cards">
+                <div class="card">
+                    <img src="img/int2.jpg" alt="">
+                    <!--Practica 3 M3S2-->
+                    <div class="contenido-texto-card">
+                        <p id="demoi"></p>
+                        <script>
+                            var i={
+                                n:"<h2>Isai Martinez Cano</h2>",
+                                a:"<h3>17 Años</h3>",
+                                c:["<h3>Altura 1.70","Programador</h3>"]
+
+                            };
+                            document.getElementById("demoi").innerHTML=
+                            i["n"]+"<br>"+
+                            i["a"]+
+                            i["c"][0]+"<br>"+
+                            i["c"][1];
+                        </script>
+                    </div>
+                </div>
+                <!--ACTIVIDAD 3 M3S2-->
+                <div class="card">
+                    <img src="img/int1.jpg" alt="">
+                    <div class="contenido-texto-card">
+                        <p id="demoy"></p>
+                        <script>
+                            var y={
+                                n2:"<h2>Yeremy Cano Martinez</h2>",
+                                a2:"<h3>17 Años</h3>",
+                                c2:["<h3>Altura 1.78","Diseñador</h3>"]
+
+                            };
+                            document.getElementById("demoy").innerHTML=
+                            y.n2+"<br>"+
+                            y.a2+
+                            y.c2[0]+"<br>"+
+                            y.c2[1];
+                        </script>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </section>
+
+    <section class="contenedorsobre-nosotros">
+        <div class="equipo">
+                <div>
+                    <img src="img/logo2.jpg" alt="" width="120px" height="120px">
+                    <p class="equipo">LOGO DEL EQUIPO</p>
+                    <p class="equipo2">A lo largo de nuestra vida, la tecnología nos ha llamado la atención de tal <br>
+                        manera que desarrollamos un gusto por ser parte de ella. Es por ello que<br> decidimos crear la página de 
+                        "EkoFit", aplicando los conocimientos <br> aprendidos en los módulos de la especialidad en programación 
+                        dentro del <br> plantel 27 Villa Alta.
+                    </p>
+                </div>
+        </div>
+    </section>
+
+    <section class="abdomen">
+        <div class="contenedor">
+            <div class="img">
+                <!--ACTIVIDAD 2 M3S1-->
+                <div><br><br>
+                    <center><button id="buttonc" onclick="C()"> <img src="img/cecyte.jpg" alt="" width="270px" height="80px"><br> !Educacion, ciencia y tecnología, fortaleza para el futuro!</button></center>
+                    <script>
+                        function C(caracteristicas){
+                            var c1="<br><center><h3>PLANTEL CECYTE 27 VILLA ALTA, TLAX, CARRERA TÉCNICOS EN PROGRAMACIÓN.</h3></center>";
+                            document.getElementById("demo").innerHTML=
+                            c1;
+                        }
+                    </script>
+                    <p id="demo"></p><br>
+                </div>
+            </div>
+        </div><br><br><br>
+    </section>
+
+    <footer>
+        <div class="contenedor-footer">
+            <div class="cont-foo">
+                <h4>Gmail.</h4>
+                <p>isaim8575@gmail.com</p>
+                <p>yerecano216@gmail.com</p>
+            </div>
+            <div class="cont-foo">
+                <h4>Telefono.</h4>
+                <p>2481022765</p>
+                <p>2481740167</p>
+            </div>
+        </div>
+        <h2 class="titulo-final">&copy;Isai MArtinez | Yeremy Cano</h2>
+    </footer>
+        
+    
+</body>
+</html>
